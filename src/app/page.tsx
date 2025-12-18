@@ -308,16 +308,15 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right - Hero Image Placeholder */}
+            {/* Right - Hero Image */}
             <div className="flex justify-center lg:justify-end">
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 w-full max-w-md aspect-square flex items-center justify-center">
-                <div className="text-center text-white/60">
-                  <div className="text-6xl mb-4">🎯</div>
-                  <p className="text-sm">Image Hero</p>
-                  <p className="text-xs mt-1">/public/hero-image.png</p>
-                  <p className="text-xs">500x500px recommandé</p>
-                </div>
-              </div>
+              <Image
+                src="/hero-image.png"
+                alt="Formation Managersity"
+                width={500}
+                height={500}
+                className="rounded-2xl shadow-2xl w-full max-w-md"
+              />
             </div>
           </div>
         </div>
@@ -327,15 +326,15 @@ export default function Home() {
       <section className="py-20 px-4 md:px-8 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Image placeholder */}
+            {/* Image */}
             <div className="order-2 md:order-1">
-              <div className="bg-gray-200 rounded-2xl aspect-video flex items-center justify-center">
-                <div className="text-center text-gray-500">
-                  <div className="text-5xl mb-3">👥</div>
-                  <p className="text-sm">Image Section</p>
-                  <p className="text-xs">/public/context-image.png</p>
-                </div>
-              </div>
+              <Image
+                src="/context-image.png"
+                alt="Pourquoi cette opportunité"
+                width={600}
+                height={400}
+                className="rounded-2xl shadow-lg w-full"
+              />
             </div>
             
             {/* Content */}
@@ -497,13 +496,13 @@ export default function Home() {
             </div>
             
             <div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl aspect-video flex items-center justify-center border border-white/20">
-                <div className="text-center text-white/60">
-                  <div className="text-5xl mb-3">🎓</div>
-                  <p className="text-sm">Image Témoignage</p>
-                  <p className="text-xs">/public/testimonial-image.png</p>
-                </div>
-              </div>
+              <Image
+                src="/testimonial-image.png"
+                alt="Témoignages apprenants"
+                width={600}
+                height={400}
+                className="rounded-2xl shadow-lg w-full"
+              />
             </div>
           </div>
         </div>
