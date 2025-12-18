@@ -169,9 +169,9 @@ function AcademicIcon() {
   );
 }
 
-function CheckIcon() {
+function CheckIcon({ className = "text-green-medium" }: { className?: string }) {
   return (
-    <svg className="w-5 h-5 text-green-medium" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+    <svg className={`w-5 h-5 ${className}`} fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
       <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
     </svg>
   );
@@ -401,7 +401,7 @@ export default function Home() {
             <div className="grid sm:grid-cols-2 gap-4 max-w-lg mx-auto mb-8 text-left">
               {["Tous les cours", "Tous les parcours élites", "Nouvelles formations incluses", "Certificat Full Access", "Priorité événements"].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <CheckIcon />
+                  <CheckIcon className="text-gold-medium" />
                   <span className="text-white/90">{item}</span>
                 </div>
               ))}
@@ -517,10 +517,10 @@ export default function Home() {
             <div>
               <h4 className="font-semibold mb-4">Parcours</h4>
               <ul className="space-y-2 text-sm text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">Dirigeant d&apos;Élite</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Manager d&apos;Élite</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Manager Commercial</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">RH & Capital Humain</a></li>
+                <li><a href="#parcours" className="hover:text-white transition-colors">Dirigeant d&apos;Élite</a></li>
+                <li><a href="#parcours" className="hover:text-white transition-colors">Manager d&apos;Élite</a></li>
+                <li><a href="#parcours" className="hover:text-white transition-colors">Manager Commercial</a></li>
+                <li><a href="#parcours" className="hover:text-white transition-colors">RH & Capital Humain</a></li>
               </ul>
             </div>
 
