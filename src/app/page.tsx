@@ -117,9 +117,9 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative min-h-screen flex flex-col bg-gradient-to-br from-green-dark via-green-medium to-green-light overflow-hidden">
         {/* Animated background */}
-        <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0 opacity-20 pointer-events-none">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gold-medium rounded-full blur-3xl animate-float" />
-          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gold-light rounded-full blur-3xl animate-float" style={{ animationDelay: "-10s" }} />
+          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gold-light rounded-full blur-3xl animate-float [animation-delay:-10s]" />
         </div>
 
         {/* Header */}
@@ -160,13 +160,13 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="#parcours"
-                className="inline-block bg-gradient-to-r from-gold-dark via-gold-medium to-gold-light text-charcoal font-bold py-4 px-8 rounded uppercase tracking-wide shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
+                className="inline-block bg-gradient-to-r from-gold-dark via-gold-medium to-gold-light text-charcoal font-bold py-4 px-8 rounded-lg uppercase tracking-wide shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
               >
                 👉 Découvrir les offres
               </a>
               <a
                 href="#ultimate"
-                className="inline-block bg-transparent text-white font-semibold py-4 px-8 rounded border-2 border-white/80 uppercase tracking-wide hover:bg-white/10 hover:border-white hover:-translate-y-0.5 transition-all duration-300"
+                className="inline-block bg-transparent text-white font-semibold py-4 px-8 rounded-lg border-2 border-white/80 uppercase tracking-wide hover:bg-white/10 hover:border-white hover:-translate-y-0.5 transition-all duration-300"
               >
                 👉 Accéder à l&apos;Ultimate Pack
               </a>
@@ -190,7 +190,7 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl font-bold text-green-dark mb-4">
             Pourquoi cette opportunité ?
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-green-dark to-gold-medium mx-auto rounded mb-10" />
+          <div className="w-20 h-1 bg-gradient-to-r from-green-dark to-gold-medium mx-auto rounded-sm mb-10" />
           <p className="text-lg text-gray-600 mb-8 leading-relaxed">
             La fin d&apos;année est le moment idéal pour <strong>faire le point</strong>, <strong>corriger ce qui n&apos;a pas marché</strong> et <strong>se préparer sérieusement</strong> pour l&apos;année à venir.
           </p>
@@ -199,7 +199,7 @@ export default function Home() {
           </p>
           <a
             href="#parcours"
-            className="inline-block bg-gradient-to-r from-gold-dark via-gold-medium to-gold-light text-charcoal font-bold py-4 px-8 rounded uppercase tracking-wide shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
+            className="inline-block bg-gradient-to-r from-gold-dark via-gold-medium to-gold-light text-charcoal font-bold py-4 px-8 rounded-lg uppercase tracking-wide shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
           >
             👉 Découvrez maintenant
           </a>
@@ -212,7 +212,7 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl font-bold text-center text-green-dark mb-4">
             Deux options pour avancer
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-green-dark to-gold-medium mx-auto rounded mb-12" />
+          <div className="w-20 h-1 bg-gradient-to-r from-green-dark to-gold-medium mx-auto rounded-sm mb-12" />
 
           <div className="grid md:grid-cols-2 gap-8">
             {/* Option 1 */}
@@ -235,7 +235,7 @@ export default function Home() {
 
             {/* Option 2 */}
             <div className="relative bg-gradient-to-br from-green-dark to-green-medium rounded-2xl p-8 shadow-lg text-white overflow-hidden">
-              <div className="absolute -top-2 -right-2 bg-gradient-to-r from-red-500 to-red-600 text-white px-4 py-1 rounded-full text-xs font-bold uppercase shadow-lg animate-bounce-slow">
+              <div className="absolute -top-2 -right-2 bg-gradient-to-r from-red-500 to-red-600 text-white px-4 py-1 rounded-full text-xs font-bold uppercase shadow-lg animate-bounce-slow z-20">
                 Recommandé
               </div>
               <div className="absolute top-0 right-0 w-64 h-64 bg-gold-medium/20 rounded-full blur-3xl animate-pulse-slow" />
@@ -266,7 +266,7 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl font-bold text-center text-green-dark mb-4">
             Nos Parcours Élites
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-green-dark to-gold-medium mx-auto rounded mb-4" />
+          <div className="w-20 h-1 bg-gradient-to-r from-green-dark to-gold-medium mx-auto rounded-sm mb-4" />
           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
             Des parcours pensés pour élever vos compétences, changer de dimension et transformer durablement vos pratiques.
           </p>
@@ -281,7 +281,7 @@ export default function Home() {
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-green-dark to-gold-medium" />
                 
                 {p.highlight && (
-                  <div className="absolute -top-2 -right-2 bg-gradient-to-r from-red-500 to-red-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase shadow-lg animate-bounce-slow">
+                  <div className="absolute -top-2 -right-2 bg-gradient-to-r from-red-500 to-red-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase shadow-lg animate-bounce-slow z-10">
                     Populaire
                   </div>
                 )}
@@ -324,7 +324,7 @@ export default function Home() {
           <div className="relative bg-gradient-to-br from-green-dark to-green-medium rounded-2xl p-8 md:p-12 text-white text-center overflow-hidden shadow-2xl">
             {/* Animated glow */}
             <div className="absolute top-0 right-0 w-96 h-96 bg-gold-light/20 rounded-full blur-3xl animate-pulse-slow" />
-            <div className="absolute bottom-0 left-0 w-80 h-80 bg-gold-medium/15 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: "-2s" }} />
+            <div className="absolute bottom-0 left-0 w-80 h-80 bg-gold-medium/15 rounded-full blur-3xl animate-pulse-slow [animation-delay:-2s]" />
             
             <div className="relative z-10">
               <span className="inline-block bg-gold-medium text-charcoal px-4 py-1 rounded-full text-sm font-bold mb-6">
@@ -361,7 +361,7 @@ export default function Home() {
 
               <a
                 href={LINKS.ultimatePack}
-                className="inline-block bg-gradient-to-r from-gold-dark via-gold-medium to-gold-light text-charcoal font-bold py-4 px-10 rounded uppercase tracking-wide shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 text-lg"
+                className="inline-block bg-gradient-to-r from-gold-dark via-gold-medium to-gold-light text-charcoal font-bold py-4 px-10 rounded-lg uppercase tracking-wide shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 text-lg"
               >
                 JE VEUX L&apos;ULTIMATE PACK
               </a>
@@ -398,7 +398,7 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl font-bold text-center text-green-dark mb-4">
             Questions fréquentes
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-green-dark to-gold-medium mx-auto rounded mb-12" />
+          <div className="w-20 h-1 bg-gradient-to-r from-green-dark to-gold-medium mx-auto rounded-sm mb-12" />
 
           <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
             {faqData.map((item, index) => (
@@ -436,10 +436,10 @@ export default function Home() {
             Après la campagne, les prix reviennent à la normale et certains parcours ne seront plus disponibles sous ce format.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#parcours" className="inline-block bg-white text-red-600 font-bold py-3 px-8 rounded hover:bg-gray-100 transition-colors">
+            <a href="#parcours" className="inline-block bg-white text-red-600 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">
               Choisir un Parcours
             </a>
-            <a href="#ultimate" className="inline-block bg-gold-medium text-charcoal font-bold py-3 px-8 rounded hover:bg-gold-light transition-colors">
+            <a href="#ultimate" className="inline-block bg-gold-medium text-charcoal font-bold py-3 px-8 rounded-lg hover:bg-gold-light transition-colors">
               Choisir l&apos;Ultimate Pack
             </a>
           </div>
@@ -458,13 +458,13 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#parcours"
-              className="inline-block bg-gradient-to-r from-gold-dark via-gold-medium to-gold-light text-charcoal font-bold py-4 px-8 rounded uppercase tracking-wide shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
+              className="inline-block bg-gradient-to-r from-gold-dark via-gold-medium to-gold-light text-charcoal font-bold py-4 px-8 rounded-lg uppercase tracking-wide shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
             >
               👉 Découvrir les Parcours Élites
             </a>
             <a
               href="#ultimate"
-              className="inline-block bg-green-dark text-white font-bold py-4 px-8 rounded hover:bg-green-medium transition-colors"
+              className="inline-block bg-green-dark text-white font-bold py-4 px-8 rounded-lg hover:bg-green-medium transition-colors"
             >
               👉 Ultimate Pack – Full Access 12 mois
             </a>
