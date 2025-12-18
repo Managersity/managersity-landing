@@ -5,12 +5,12 @@ import { useState, useEffect } from "react";
 
 // Liens externes - à personnaliser
 const LINKS = {
-  parcoursDirigeant: "#",
-  parcoursManager: "#",
-  parcoursCommercial: "#",
-  parcoursRH: "#",
-  parcoursIA: "#",
-  parcoursClarte: "#",
+  parcoursDirigeant: "https://shop.managersity.com/produit/parcours-dirigeant-delite/",
+  parcoursManager: "https://shop.managersity.com/produit/parcours-manager-delite/",
+  parcoursCommercial: "https://shop.managersity.com/produit/parcours-manager-commercial-delite/",
+  parcoursRH: "https://shop.managersity.com/produit/parcours-rh-capital-humain-delite/",
+  parcoursIA: "https://shop.managersity.com/produit/parcours-ia-performance-professionnelle-delite/",
+  parcoursClarte: "https://shop.managersity.com/produit/parcours-clarte-performance-personnelle-delite/",
   ultimatePack: "#",
   whatsapp: "https://wa.me/221771017188",
   email: "mailto:contact@managersity.co",
@@ -29,6 +29,7 @@ const parcours = [
     price: "249.000 FCFA",
     link: LINKS.parcoursDirigeant,
     highlight: true,
+    image: "/parcours-dirigeant.png",
   },
   {
     id: "manager",
@@ -37,6 +38,7 @@ const parcours = [
     features: ["Management d'équipe", "Communication managériale", "Leadership opérationnel", "Gestion des conflits"],
     price: "79.000 FCFA",
     link: LINKS.parcoursManager,
+    image: "/parcours-manager.png",
   },
   {
     id: "commercial",
@@ -45,6 +47,7 @@ const parcours = [
     features: ["Management commercial", "Vente & négociation", "Suivi des objectifs", "Coaching des équipes"],
     price: "79.000 FCFA",
     link: LINKS.parcoursCommercial,
+    image: "/parcours-commercial.png",
   },
   {
     id: "rh",
@@ -53,6 +56,7 @@ const parcours = [
     features: ["Organisation RH", "Performance & culture", "Processus & pilotage", "Rôle stratégique de la fonction RH"],
     price: "79.000 FCFA",
     link: LINKS.parcoursRH,
+    image: "/parcours-rh.png",
   },
   {
     id: "ia",
@@ -62,6 +66,7 @@ const parcours = [
     price: "99.000 FCFA",
     link: LINKS.parcoursIA,
     icon: "🤖",
+    image: "/parcours-ia.png",
   },
   {
     id: "clarte",
@@ -70,6 +75,7 @@ const parcours = [
     features: ["Clarté mentale & lucidité", "Discipline personnelle & constance", "Gestion de l'énergie & équilibre", "Mental de performance & résilience"],
     price: "59.000 FCFA",
     link: LINKS.parcoursClarte,
+    image: "/parcours-clarte.png",
   },
 ];
 
@@ -434,33 +440,46 @@ export default function Home() {
             {parcours.map((p) => (
               <div
                 key={p.id}
-                className={`bg-white rounded-xl p-6 border transition-all hover:shadow-lg ${
+                className={`bg-white rounded-xl overflow-hidden border transition-all hover:shadow-lg ${
                   p.highlight ? "border-gold-medium ring-1 ring-gold-medium" : "border-gray-200 hover:border-green-dark/30"
                 }`}
               >
-                {p.highlight && (
-                  <span className="inline-block bg-gold-medium text-charcoal text-xs font-semibold px-3 py-1 rounded-full mb-4">
-                    Populaire
-                  </span>
-                )}
-                <h3 className="text-lg font-semibold text-charcoal mb-2">
-                  {p.icon && <span className="mr-2">{p.icon}</span>}
-                  {p.title}
-                </h3>
-                <p className="text-gray-600 text-sm mb-4">{p.description}</p>
-                <ul className="space-y-2 mb-6">
-                  {p.features.map((f, i) => (
-                    <li key={i} className="flex items-center gap-2 text-sm text-gray-700">
-                      <CheckIcon />
-                      {f}
-                    </li>
-                  ))}
-                </ul>
-                <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-                  <span className="text-xl font-bold text-green-dark">{p.price}</span>
-                  <a href={p.link} className="text-green-dark hover:text-green-medium font-medium text-sm transition-colors">
-                    DÉCOUVRIR →
-                  </a>
+                {/* Image du parcours */}
+                <div className="px-4 pt-4">
+                  <Image
+                    src={p.image}
+                    alt={p.title}
+                    width={400}
+                    height={250}
+                    className="w-full h-auto rounded-lg object-cover"
+                  />
+                </div>
+                
+                <div className="p-6">
+                  {p.highlight && (
+                    <span className="inline-block bg-gold-medium text-charcoal text-xs font-semibold px-3 py-1 rounded-full mb-4">
+                      Populaire
+                    </span>
+                  )}
+                  <h3 className="text-lg font-semibold text-charcoal mb-2">
+                    {p.icon && <span className="mr-2">{p.icon}</span>}
+                    {p.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm mb-4">{p.description}</p>
+                  <ul className="space-y-2 mb-6">
+                    {p.features.map((f, i) => (
+                      <li key={i} className="flex items-center gap-2 text-sm text-gray-700">
+                        <CheckIcon />
+                        {f}
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="flex items-center justify-between pt-4 border-t border-gray-100">
+                    <span className="text-xl font-bold text-green-dark">{p.price}</span>
+                    <a href={p.link} className="text-green-dark hover:text-green-medium font-medium text-sm transition-colors">
+                      DÉCOUVRIR →
+                    </a>
+                  </div>
                 </div>
               </div>
             ))}
