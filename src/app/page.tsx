@@ -300,10 +300,10 @@ export default function Home() {
               
               <div className="flex flex-col sm:flex-row gap-4">
                 <a href="#parcours" className="bg-gold-medium hover:bg-gold-light text-charcoal font-semibold px-6 py-3 rounded-lg transition-colors text-center">
-                  👉 Découvrir les offres
+                  Découvrir les offres
                 </a>
                 <a href="#ultimate" className="bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-lg border border-white/30 transition-colors text-center">
-                  👉 Accéder à l&apos;Ultimate Pack
+                  Accéder à l&apos;Ultimate Pack
                 </a>
               </div>
             </div>
@@ -457,7 +457,7 @@ export default function Home() {
                   ))}
                 </ul>
                 <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-                  <span className="text-xl font-bold text-green-dark">💰 {p.price}</span>
+                  <span className="text-xl font-bold text-green-dark">{p.price}</span>
                   <a href={p.link} className="text-green-dark hover:text-green-medium font-medium text-sm transition-colors">
                     DÉCOUVRIR →
                   </a>
@@ -606,7 +606,6 @@ export default function Home() {
       {/* SECTION 8 — URGENCE & CLÔTURE - Fond charcoal/sombre avec compteur */}
       <section className="py-16 px-4 md:px-8 bg-charcoal text-white">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-5xl mb-6">⏰</p>
           <h2 className="text-2xl md:text-3xl font-bold mb-6">
             Attention : ces offres disparaissent dans
           </h2>
@@ -637,10 +636,10 @@ export default function Home() {
           </h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="#parcours" className="bg-gold-medium hover:bg-gold-light text-charcoal font-semibold px-8 py-4 rounded-lg transition-colors">
-              👉 Découvrir les Parcours Élites
+              Découvrir les Parcours Élites
             </a>
             <a href="#ultimate" className="bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-lg border border-white/30 transition-colors">
-              👉 Accéder à l&apos;Ultimate Pack – Full Access 12 mois
+              Accéder à l&apos;Ultimate Pack – Full Access 12 mois
             </a>
           </div>
         </div>
