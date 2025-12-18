@@ -121,23 +121,23 @@ function useCountdown(targetDate: Date) {
   return timeLeft;
 }
 
-// Countdown Component
+// Countdown Component - Version compacte pour le hero
 function Countdown({ targetDate }: { targetDate: Date }) {
   const { days, hours, minutes, seconds } = useCountdown(targetDate);
 
   return (
-    <div className="flex gap-3 md:gap-4">
+    <div className="flex gap-2 md:gap-3">
       {[
-        { value: days, label: "Jours" },
-        { value: hours, label: "Heures" },
-        { value: minutes, label: "Min" },
-        { value: seconds, label: "Sec" },
+        { value: days, label: "J" },
+        { value: hours, label: "H" },
+        { value: minutes, label: "M" },
+        { value: seconds, label: "S" },
       ].map((item, i) => (
         <div key={i} className="text-center">
-          <div className="bg-white text-green-dark text-2xl md:text-4xl font-bold rounded-lg w-16 md:w-20 h-16 md:h-20 flex items-center justify-center shadow-lg">
+          <div className="bg-white/20 backdrop-blur-sm text-white text-xl md:text-2xl font-bold rounded-lg w-12 md:w-14 h-12 md:h-14 flex items-center justify-center">
             {String(item.value).padStart(2, "0")}
           </div>
-          <p className="text-white/80 text-xs md:text-sm mt-2">{item.label}</p>
+          <p className="text-white/60 text-xs mt-1">{item.label}</p>
         </div>
       ))}
     </div>
@@ -208,19 +208,22 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 md:px-8 bg-gradient-to-br from-green-dark via-green-dark to-green-medium">
-        <div className="max-w-7xl mx-auto">
+      <section className="pt-28 pb-16 px-4 md:px-8 bg-gradient-to-br from-green-dark via-green-dark to-green-medium min-h-screen flex items-center">
+        <div className="max-w-7xl mx-auto w-full">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left content */}
             <div className="text-white">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                JE SUIS FOCUS<br />
-                <span className="text-gold-light">EN 2026</span>
+              <div className="inline-block bg-gold-medium/20 border border-gold-medium/40 text-gold-light text-sm font-semibold px-4 py-2 rounded-full mb-6">
+                🔥 Jusqu&apos;à -70% pendant 10 jours
+              </div>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
+                ACCÉDEZ À TOUT ET <span className="text-gold-light">CASSEZ LA BARAQUE</span> EN 2026 !
               </h1>
-              <p className="text-lg md:text-xl text-white/80 mb-8 max-w-lg">
-                La plus grande montée en compétences commence maintenant. Accédez à nos Parcours Élites ou à l&apos;Ultimate Pack.
+              <p className="text-base md:text-lg text-white/80 mb-8 leading-relaxed">
+                Choisissez parmi <strong className="text-white">6 Parcours Élites</strong> ultra-ciblés (Dirigeant, Manager, Commercial, RH, IA, Performance Personnelle) ou prenez l&apos;<strong className="text-white">Ultimate Pack</strong> pour un accès total à toute la plateforme pendant 12 mois. Des prix jamais vus. Une opportunité unique.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 mb-12">
+              
+              <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <a href="#parcours" className="bg-gold-medium hover:bg-gold-light text-charcoal font-semibold px-6 py-3 rounded-lg transition-colors text-center">
                   Découvrir les Parcours
                 </a>
@@ -229,53 +232,78 @@ export default function Home() {
                 </a>
               </div>
 
-              {/* Stats */}
-              <div className="flex gap-8 md:gap-12">
-                <div>
-                  <p className="text-3xl md:text-4xl font-bold text-gold-light">6</p>
-                  <p className="text-white/60 text-sm">Parcours Élites</p>
-                </div>
-                <div>
-                  <p className="text-3xl md:text-4xl font-bold text-gold-light">12</p>
-                  <p className="text-white/60 text-sm">Mois d&apos;accès</p>
-                </div>
-                <div>
-                  <p className="text-3xl md:text-4xl font-bold text-gold-light">100%</p>
-                  <p className="text-white/60 text-sm">En ligne</p>
-                </div>
+              {/* Timer moved here */}
+              <div className="flex items-center gap-4">
+                <span className="text-white/70 text-sm">⏰ Fin de l&apos;offre dans :</span>
+                <Countdown targetDate={END_DATE} />
               </div>
             </div>
 
-            {/* Right - Countdown */}
-            <div className="flex flex-col items-center lg:items-end">
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/20">
-                <p className="text-white/80 text-center mb-4 font-medium">⏰ Offre valable encore</p>
-                <Countdown targetDate={END_DATE} />
-                <p className="text-white/60 text-center text-sm mt-4">
-                  Après cette date, les prix reviennent à la normale
-                </p>
+            {/* Right - Hero Image */}
+            <div className="flex justify-center lg:justify-end">
+              {/* PLACEHOLDER: Remplacer par votre image hero */}
+              {/* Pour remplacer: 
+                  1. Ajoutez votre image dans /public/hero-image.png
+                  2. Décommentez le code Image ci-dessous
+                  3. Supprimez le div placeholder
+              */}
+              {/* 
+              <Image
+                src="/hero-image.png"
+                alt="Formation Managersity"
+                width={500}
+                height={500}
+                className="rounded-2xl shadow-2xl"
+              />
+              */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 w-full max-w-md aspect-square flex items-center justify-center">
+                <div className="text-center text-white/60">
+                  <div className="text-6xl mb-4">🎯</div>
+                  <p className="text-sm">Image Hero</p>
+                  <p className="text-xs mt-1">/public/hero-image.png</p>
+                  <p className="text-xs">500x500px recommandé</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Value Proposition */}
+      {/* Value Proposition with Image */}
       <section className="py-20 px-4 md:px-8 bg-gray-50">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
-            MANAGERSITY by H&C
-          </h2>
-          <p className="text-gray-600 text-lg mb-10 max-w-2xl mx-auto">
-            Plateforme de formation en ligne spécialisée en management. Nous proposons des parcours structurés pour les dirigeants, managers et professionnels ambitieux.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a href="#parcours" className="bg-green-dark hover:bg-green-medium text-white font-medium px-6 py-3 rounded-lg transition-colors">
-              Nos Parcours Élites
-            </a>
-            <a href="#ultimate" className="bg-white hover:bg-gray-100 text-green-dark font-medium px-6 py-3 rounded-lg border border-green-dark/20 transition-colors">
-              Ultimate Pack
-            </a>
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Image placeholder */}
+            <div className="order-2 md:order-1">
+              {/* PLACEHOLDER: Remplacer par votre image 
+                  Suggestion: Photo d'équipe, bureau, ou illustration 
+              */}
+              <div className="bg-gray-200 rounded-2xl aspect-video flex items-center justify-center">
+                <div className="text-center text-gray-500">
+                  <div className="text-5xl mb-3">👥</div>
+                  <p className="text-sm">Image Section</p>
+                  <p className="text-xs">/public/about-image.png</p>
+                </div>
+              </div>
+            </div>
+            
+            {/* Content */}
+            <div className="order-1 md:order-2">
+              <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+                MANAGERSITY by H&C
+              </h2>
+              <p className="text-gray-600 text-lg mb-6 leading-relaxed">
+                Plateforme de formation en ligne spécialisée en management. Nous proposons des parcours structurés pour les dirigeants, managers et professionnels ambitieux.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <a href="#parcours" className="bg-green-dark hover:bg-green-medium text-white font-medium px-6 py-3 rounded-lg transition-colors">
+                  Nos Parcours Élites
+                </a>
+                <a href="#ultimate" className="bg-white hover:bg-gray-100 text-green-dark font-medium px-6 py-3 rounded-lg border border-green-dark/20 transition-colors">
+                  Ultimate Pack
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -380,6 +408,49 @@ export default function Home() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Social Proof / Testimonial Section */}
+      <section className="py-20 px-4 md:px-8 bg-green-dark">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Content */}
+            <div className="text-white">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Rejoignez des milliers de professionnels
+              </h2>
+              <p className="text-white/80 text-lg mb-8 leading-relaxed">
+                Des dirigeants, managers et entrepreneurs ont déjà transformé leurs compétences avec nos parcours. À votre tour de passer au niveau supérieur.
+              </p>
+              <div className="grid grid-cols-3 gap-6">
+                <div>
+                  <p className="text-3xl md:text-4xl font-bold text-gold-light">2000+</p>
+                  <p className="text-white/60 text-sm">Apprenants</p>
+                </div>
+                <div>
+                  <p className="text-3xl md:text-4xl font-bold text-gold-light">15+</p>
+                  <p className="text-white/60 text-sm">Pays</p>
+                </div>
+                <div>
+                  <p className="text-3xl md:text-4xl font-bold text-gold-light">95%</p>
+                  <p className="text-white/60 text-sm">Satisfaction</p>
+                </div>
+              </div>
+            </div>
+            
+            {/* Image placeholder */}
+            <div>
+              {/* PLACEHOLDER: Remplacer par une image de témoignage ou apprenants */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl aspect-video flex items-center justify-center border border-white/20">
+                <div className="text-center text-white/60">
+                  <div className="text-5xl mb-3">🎓</div>
+                  <p className="text-sm">Image Témoignage</p>
+                  <p className="text-xs">/public/testimonial-image.png</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
