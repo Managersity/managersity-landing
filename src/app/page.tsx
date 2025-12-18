@@ -24,7 +24,7 @@ const parcours = [
   {
     id: "dirigeant",
     title: "Parcours Dirigeant d'Élite",
-    description: "Acquérez les compétences clés pour briller en tant que dirigeant et réussir votre promotion.",
+    description: "Acquérez les compétences clés pour briller en tant que dirigeant et réussir votre promotion. Empruntez un parcours diligent alliant fluidité et simplicité, avec un style direct et précis.",
     features: ["Leadership stratégique", "Vision & pilotage", "Gouvernance & décision", "Transformation & IA"],
     price: "249.000 FCFA",
     link: LINKS.parcoursDirigeant,
@@ -33,41 +33,41 @@ const parcours = [
   {
     id: "manager",
     title: "Parcours Manager d'Élite",
-    description: "Sortez de la naïveté, comprenez les règles d'excellence et affirmez votre maturité managériale.",
+    description: "Sortir de la naiveté, comprendre les règles d'excellence et l'élevation managériale et affirmer sa maturité structurelle et managériale et augmenter ses chances de réussir en tant que manager et mériter des next steps.",
     features: ["Management d'équipe", "Communication managériale", "Leadership opérationnel", "Gestion des conflits"],
     price: "79.000 FCFA",
     link: LINKS.parcoursManager,
   },
   {
     id: "commercial",
-    title: "Parcours Manager Commercial",
-    description: "Méthodes de pilotage commercial pour réussir et orchestrer la performance commerciale.",
+    title: "Parcours Manager Commercial d'Élite",
+    description: "Etat d'Esprit, dispositifs et méthodes de pilotage commercial pour les directeurs et managers commerciaux pour réussir son job et être à l'aise dans la production commerciale et l'orchestration de la performance commerciale.",
     features: ["Management commercial", "Vente & négociation", "Suivi des objectifs", "Coaching des équipes"],
     price: "79.000 FCFA",
     link: LINKS.parcoursCommercial,
   },
   {
     id: "rh",
-    title: "Parcours RH & Capital Humain",
-    description: "Faites du capital humain un levier de performance pour votre organisation.",
-    features: ["Organisation RH", "Performance & culture", "Processus & pilotage", "Rôle stratégique RH"],
+    title: "Parcours RH & Capital Humain d'Élite",
+    description: "Sortir de l'approximation en management du capital humain et faire du capital humain un levier de performance.",
+    features: ["Organisation RH", "Performance & culture", "Processus & pilotage", "Rôle stratégique de la fonction RH"],
     price: "79.000 FCFA",
     link: LINKS.parcoursRH,
   },
   {
     id: "ia",
-    title: "Parcours IA & Performance",
-    description: "Comprenez l'IA de A-Z pour booster la productivité d'un professionnel et d'une équipe.",
-    features: ["Fondamentaux IA", "IA pour managers", "Productivité & cas d'usage", "Transformation digitale"],
+    title: "Parcours IA & Performance Professionnelle d'Élite",
+    description: "Comprendre l'IA de A-Z avec une bonne immersion dans les utilisations pratiques pour booster la productivité et les performances d'un professionnel et d'une équipe.",
+    features: ["Fondamentaux IA", "IA pour managers & dirigeants", "Productivité & cas d'usage", "Transformation digitale"],
     price: "99.000 FCFA",
     link: LINKS.parcoursIA,
     icon: "🤖",
   },
   {
     id: "clarte",
-    title: "Parcours Clarté & Performance",
-    description: "Renforcez la lucidité et construisez une discipline intérieure solide.",
-    features: ["Clarté mentale", "Discipline personnelle", "Gestion de l'énergie", "Mental de performance"],
+    title: "Parcours Clarté & Performance Personnelle d'Élite",
+    description: "Sortir de la dispersion, renforcer la lucidité personnelle et construire une discipline intérieure solide afin d'améliorer la qualité de ses décisions, sa constance dans l'action et sa performance globale dans un environnement exigeant.",
+    features: ["Clarté mentale & lucidité", "Discipline personnelle & constance", "Gestion de l'énergie & équilibre", "Mental de performance & résilience"],
     price: "59.000 FCFA",
     link: LINKS.parcoursClarte,
   },
@@ -75,24 +75,104 @@ const parcours = [
 
 const faqData = [
   {
-    q: "Qu'est-ce que la campagne « JE SUIS FOCUS EN 2026 » ?",
-    a: "C'est la campagne de fin d'année de MANAGERSITY by H&C, pensée pour aider les professionnels à clarifier leurs priorités, renforcer leurs compétences clés et préparer efficacement l'année 2026."
+    q: "1. Qu'est-ce que la campagne « JE SUIS FOCUS EN 2026 » ?",
+    a: "C'est la campagne de fin d'année de MANAGERSITY by H&C, pensé pour aider les professionnels à clarifier leurs priorités, renforcer leurs compétences clés et préparer efficacement l'année 2026. Elle propose des Parcours Élites, ciblés par rôle et par enjeu, et un Ultimate Pack, donnant un accès total à la plateforme pendant 12 mois."
   },
   {
-    q: "À qui s'adresse cette campagne ?",
-    a: "À toute personne qui veut entrer en 2026 avec plus de clarté : dirigeants, entrepreneurs, managers, responsables d'équipe, RH, commerciaux et professionnels ambitieux."
+    q: "2. À qui s'adresse cette campagne ?",
+    a: "À toute personne qui veut entrer en 2026 avec plus de clarté et de structure, notamment : dirigeants et entrepreneurs, managers et responsables d'équipe, RH et fonctions support, commerciaux et managers commerciaux, professionnels ambitieux en évolution."
   },
   {
-    q: "Qu'est-ce qu'un Parcours Élite ?",
-    a: "Un programme structuré qui regroupe plusieurs formations autour d'un enjeu précis. Un parcours = une transformation claire."
+    q: "3. Est-ce une simple promotion ?",
+    a: "Non. Il s'agit d'une opération structurée et limitée dans le temps, avec des formats spécifiques (Parcours Élites, Ultimate Pack) proposés uniquement pendant cette campagne."
   },
   {
-    q: "Qu'est-ce que l'Ultimate Pack ?",
-    a: "L'Ultimate Pack donne un accès total à la plateforme pendant 12 mois : tous les cours, tous les parcours, toutes les nouvelles formations."
+    q: "4. Combien de temps dure la campagne ?",
+    a: "La campagne se déroule sur 10 jours au total. À la fin, les conditions actuelles ne seront plus disponibles."
   },
   {
-    q: "Puis-je apprendre à mon rythme ?",
-    a: "Oui. Tous les contenus sont accessibles en ligne et peuvent être suivis selon votre disponibilité."
+    q: "5. Qu'est-ce qu'un Parcours Élite ?",
+    a: "Un Parcours Élite est un programme structuré qui regroupe plusieurs formations autour d'un enjeu précis (dirigeant, manager, RH, commercial, IA, performance personnelle). Un parcours = une transformation claire."
+  },
+  {
+    q: "6. Dois-je suivre tous les parcours ?",
+    a: "Non. Vous pouvez choisir un seul parcours, en fonction de votre priorité actuelle. Chaque parcours est conçu pour être autonome et complet."
+  },
+  {
+    q: "7. Puis-je suivre plusieurs parcours ?",
+    a: "Oui. Vous pouvez acheter plusieurs parcours séparément, ou opter pour l'Ultimate Pack, qui donne accès à tous les parcours."
+  },
+  {
+    q: "8. Quel parcours choisir si j'hésite ?",
+    a: "Si vous avez un enjeu principal clair → choisissez le parcours correspondant. Si vous avez plusieurs enjeux ou une vision long terme → l'Ultimate Pack est souvent le meilleur choix."
+  },
+  {
+    q: "9. Les parcours sont-ils adaptés aux débutants ?",
+    a: "Les parcours ne sont pas « débutants » au sens scolaire. Ils sont conçus pour des professionnels, avec ou sans expérience managériale, qui veulent structurer et améliorer leurs pratiques."
+  },
+  {
+    q: "10. Comment se déroule un parcours ?",
+    a: "Accès en ligne via la plateforme Managersity, progression à votre rythme, contenus structurés, applicables, orientés décision et action."
+  },
+  {
+    q: "11. Le parcours développement personnel est-il du « développement personnel classique » ?",
+    a: "Non. Ce parcours ne relève pas du développement personnel grand public. Il traite de : clarté mentale, discipline personnelle, gestion de l'énergie, solidité mentale, au service de la performance professionnelle."
+  },
+  {
+    q: "12. À qui est destiné ce parcours ?",
+    a: "À des professionnels sous pression, dirigeants ou managers, qui veulent : réduire la dispersion, améliorer la qualité de leurs décisions, renforcer leur constance et leur focus."
+  },
+  {
+    q: "13. Qu'est-ce que l'Ultimate Pack ?",
+    a: "L'Ultimate Pack Managersity donne un accès total à la plateforme pendant 12 mois. Il inclut : tous les cours, tous les Parcours Élites, toutes les nouvelles formations ajoutées durant l'année."
+  },
+  {
+    q: "14. À qui s'adresse l'Ultimate Pack ?",
+    a: "À ceux qui : ont plusieurs enjeux professionnels, veulent une vision long terme, ne veulent pas se limiter à un seul parcours, souhaitent évoluer en continu pendant l'année."
+  },
+  {
+    q: "15. Quelle est la différence entre un parcours et l'Ultimate Pack ?",
+    a: "Parcours Élite : traite un enjeu précis. Ultimate Pack : donne accès à tout, sans restriction, pendant 12 mois."
+  },
+  {
+    q: "16. L'Ultimate Pack est-il plus rentable ?",
+    a: "Oui, si vous prévoyez de suivre plusieurs parcours, ou d'explorer différents sujets au cours de l'année."
+  },
+  {
+    q: "17. Combien de temps ai-je accès aux contenus ?",
+    a: "Parcours Élite : accès selon les conditions de la plateforme. Ultimate Pack : accès total pendant 12 mois."
+  },
+  {
+    q: "18. Puis-je apprendre à mon rythme ?",
+    a: "Oui. Tous les contenus sont accessibles en ligne et peuvent être suivis à votre rythme, selon votre disponibilité."
+  },
+  {
+    q: "19. Puis-je suivre les formations tout en travaillant ?",
+    a: "Oui. Les parcours sont conçus pour des professionnels en activité, avec des formats compatibles avec un agenda chargé."
+  },
+  {
+    q: "20. Les formations sont-elles théoriques ?",
+    a: "Non. Les contenus Managersity sont : pratiques, structurés, orientés décision et application concrète."
+  },
+  {
+    q: "21. Les prix sont-ils définitifs ?",
+    a: "Les prix affichés sont valables uniquement pendant la campagne « JE SUIS FOCUS EN 2026 »."
+  },
+  {
+    q: "22. Puis-je décider plus tard ?",
+    a: "Vous pouvez, mais les formats actuels et les conditions de prix ne seront plus disponibles après la campagne."
+  },
+  {
+    q: "23. Et si je ne suis pas sûr(e) ?",
+    a: "Si vous hésitez : commencez par un Parcours Élite ciblé, ou choisissez l'Ultimate Pack pour garder une liberté totale."
+  },
+  {
+    q: "24. Que se passe-t-il après la campagne ?",
+    a: "La campagne se ferme. Managersity continuera à proposer des formations, mais pas sous ce format ni à ces conditions."
+  },
+  {
+    q: "25. Pourquoi rejoindre cette campagne maintenant ?",
+    a: "Parce que : le focus est une décision, 2026 se prépare aujourd'hui, et les compétences que vous développez maintenant détermineront vos résultats demain."
   },
 ];
 
@@ -121,7 +201,7 @@ function useCountdown(targetDate: Date) {
   return timeLeft;
 }
 
-// Countdown Component - Version compacte pour le hero
+// Countdown Component
 function Countdown({ targetDate }: { targetDate: Date }) {
   const { days, hours, minutes, seconds } = useCountdown(targetDate);
 
@@ -207,7 +287,7 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Hero Section */}
+      {/* HERO SECTION */}
       <section className="pt-28 pb-16 px-4 md:px-8 bg-gradient-to-br from-green-dark via-green-dark to-green-medium min-h-screen flex items-center">
         <div className="max-w-7xl mx-auto w-full">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -225,37 +305,22 @@ export default function Home() {
               
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <a href="#parcours" className="bg-gold-medium hover:bg-gold-light text-charcoal font-semibold px-6 py-3 rounded-lg transition-colors text-center">
-                  Découvrir les Parcours
+                  👉 Découvrir les offres
                 </a>
                 <a href="#ultimate" className="bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-lg border border-white/30 transition-colors text-center">
-                  Voir l&apos;Ultimate Pack
+                  👉 Accéder à l&apos;Ultimate Pack
                 </a>
               </div>
 
-              {/* Timer moved here */}
+              {/* Timer */}
               <div className="flex items-center gap-4">
                 <span className="text-white/70 text-sm">⏰ Fin de l&apos;offre dans :</span>
                 <Countdown targetDate={END_DATE} />
               </div>
             </div>
 
-            {/* Right - Hero Image */}
+            {/* Right - Hero Image Placeholder */}
             <div className="flex justify-center lg:justify-end">
-              {/* PLACEHOLDER: Remplacer par votre image hero */}
-              {/* Pour remplacer: 
-                  1. Ajoutez votre image dans /public/hero-image.png
-                  2. Décommentez le code Image ci-dessous
-                  3. Supprimez le div placeholder
-              */}
-              {/* 
-              <Image
-                src="/hero-image.png"
-                alt="Formation Managersity"
-                width={500}
-                height={500}
-                className="rounded-2xl shadow-2xl"
-              />
-              */}
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 w-full max-w-md aspect-square flex items-center justify-center">
                 <div className="text-center text-white/60">
                   <div className="text-6xl mb-4">🎯</div>
@@ -269,109 +334,106 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Value Proposition with Image */}
+      {/* SECTION 2 — LE CONTEXTE (POURQUOI CETTE CAMPAGNE) */}
       <section className="py-20 px-4 md:px-8 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Image placeholder */}
             <div className="order-2 md:order-1">
-              {/* PLACEHOLDER: Remplacer par votre image 
-                  Suggestion: Photo d'équipe, bureau, ou illustration 
-              */}
               <div className="bg-gray-200 rounded-2xl aspect-video flex items-center justify-center">
                 <div className="text-center text-gray-500">
                   <div className="text-5xl mb-3">👥</div>
                   <p className="text-sm">Image Section</p>
-                  <p className="text-xs">/public/about-image.png</p>
+                  <p className="text-xs">/public/context-image.png</p>
                 </div>
               </div>
             </div>
             
             {/* Content */}
             <div className="order-1 md:order-2">
-              <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
-                MANAGERSITY by H&C
+              <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-6">
+                Pourquoi cette opportunité ?
               </h2>
               <p className="text-gray-600 text-lg mb-6 leading-relaxed">
-                Plateforme de formation en ligne spécialisée en management. Nous proposons des parcours structurés pour les dirigeants, managers et professionnels ambitieux.
+                La fin d&apos;année est le moment idéal pour :
               </p>
-              <div className="flex flex-wrap gap-4">
-                <a href="#parcours" className="bg-green-dark hover:bg-green-medium text-white font-medium px-6 py-3 rounded-lg transition-colors">
-                  Nos Parcours Élites
-                </a>
-                <a href="#ultimate" className="bg-white hover:bg-gray-100 text-green-dark font-medium px-6 py-3 rounded-lg border border-green-dark/20 transition-colors">
-                  Ultimate Pack
-                </a>
-              </div>
+              <ul className="space-y-3 mb-6 text-gray-700">
+                <li className="flex items-center gap-3">
+                  <span className="text-green-medium">•</span> Faire le point
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="text-green-medium">•</span> Corriger ce qui n&apos;a pas marché
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="text-green-medium">•</span> Se préparer sérieusement pour l&apos;année à venir
+                </li>
+              </ul>
+              <p className="text-gray-600 text-lg mb-6 leading-relaxed">
+                Mais progresser ne doit pas être improvisé.
+              </p>
+              <p className="text-gray-600 text-lg mb-8 leading-relaxed">
+                Chez <strong className="text-green-dark">MANAGERSITY by H&C</strong>, nous avons regroupé nos meilleures formations en <strong>Parcours Élites</strong>, conçus pour des profils précis et des enjeux réels.
+              </p>
+              <a href="#parcours" className="bg-green-dark hover:bg-green-medium text-white font-medium px-6 py-3 rounded-lg transition-colors inline-block">
+                👉 DÉCOUVREZ MAINTENANT
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Services/Options */}
+      {/* SECTION 3 — LES 2 OPTIONS POSSIBLES */}
       <section className="py-20 px-4 md:px-8">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-charcoal mb-4">
-            Deux options pour avancer
-          </h2>
-          <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-            Choisissez le format qui correspond à vos objectifs et votre ambition
-          </p>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Option Card 1 */}
-            <div className="bg-white rounded-xl p-6 border border-gray-200 hover:border-green-dark/30 hover:shadow-lg transition-all">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Option 1 */}
+            <div className="bg-white rounded-xl p-8 border border-gray-200 hover:border-green-dark/30 hover:shadow-lg transition-all">
               <div className="w-12 h-12 bg-green-dark/10 rounded-lg flex items-center justify-center text-green-dark mb-4">
                 <AcademicIcon />
               </div>
-              <h3 className="text-xl font-semibold text-charcoal mb-2">Parcours Élite</h3>
-              <p className="text-gray-600 text-sm mb-4">Un parcours ciblé pour un objectif précis</p>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li className="flex items-center gap-2"><span className="text-green-medium">•</span> Formation structurée</li>
-                <li className="flex items-center gap-2"><span className="text-green-medium">•</span> Objectif clair</li>
-                <li className="flex items-center gap-2"><span className="text-green-medium">•</span> À votre rythme</li>
+              <h3 className="text-2xl font-bold text-charcoal mb-4">Option 1️⃣ : Choisir un Parcours Élite</h3>
+              <p className="text-gray-600 mb-6">
+                Un parcours ciblé, structuré, orienté résultat. Idéal si vous avez un <strong>objectif précis</strong> :
+              </p>
+              <ul className="space-y-2 text-gray-700">
+                <li className="flex items-center gap-2"><span className="text-green-medium">•</span> mieux diriger</li>
+                <li className="flex items-center gap-2"><span className="text-green-medium">•</span> mieux manager</li>
+                <li className="flex items-center gap-2"><span className="text-green-medium">•</span> mieux vendre</li>
+                <li className="flex items-center gap-2"><span className="text-green-medium">•</span> structurer la fonction RH</li>
+                <li className="flex items-center gap-2"><span className="text-green-medium">•</span> intégrer l&apos;IA dans votre performance</li>
               </ul>
             </div>
 
-            {/* Option Card 2 */}
-            <div className="bg-white rounded-xl p-6 border border-gray-200 hover:border-green-dark/30 hover:shadow-lg transition-all">
-              <div className="w-12 h-12 bg-green-dark/10 rounded-lg flex items-center justify-center text-green-dark mb-4">
+            {/* Option 2 */}
+            <div className="relative bg-gradient-to-br from-green-dark to-green-medium rounded-xl p-8 text-white overflow-hidden">
+              <div className="absolute -top-2 -right-2 bg-gold-medium text-charcoal px-4 py-1 rounded-full text-xs font-bold uppercase shadow-lg">
+                Recommandé
+              </div>
+              <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-4">
                 <ChartIcon />
               </div>
-              <h3 className="text-xl font-semibold text-charcoal mb-2">Ultimate Pack</h3>
-              <p className="text-gray-600 text-sm mb-4">Accès total pendant 12 mois</p>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li className="flex items-center gap-2"><span className="text-green-medium">•</span> Tous les parcours</li>
-                <li className="flex items-center gap-2"><span className="text-green-medium">•</span> Nouvelles formations</li>
-                <li className="flex items-center gap-2"><span className="text-green-medium">•</span> Certificat Full Access</li>
-              </ul>
-            </div>
-
-            {/* Option Card 3 */}
-            <div className="bg-white rounded-xl p-6 border border-gray-200 hover:border-green-dark/30 hover:shadow-lg transition-all md:col-span-2 lg:col-span-1">
-              <div className="w-12 h-12 bg-green-dark/10 rounded-lg flex items-center justify-center text-green-dark mb-4">
-                <UsersIcon />
-              </div>
-              <h3 className="text-xl font-semibold text-charcoal mb-2">Pour qui ?</h3>
-              <p className="text-gray-600 text-sm mb-4">Professionnels ambitieux</p>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li className="flex items-center gap-2"><span className="text-green-medium">•</span> Dirigeants & entrepreneurs</li>
-                <li className="flex items-center gap-2"><span className="text-green-medium">•</span> Managers & chefs d&apos;équipe</li>
-                <li className="flex items-center gap-2"><span className="text-green-medium">•</span> RH & commerciaux</li>
+              <h3 className="text-2xl font-bold mb-4">Option 2️⃣ : Choisir l&apos;Ultimate Pack</h3>
+              <p className="text-white/80 mb-6">
+                Un accès total, sans limite, pendant 12 mois. Idéal si vous voulez :
+              </p>
+              <ul className="space-y-2 text-white/90">
+                <li className="flex items-center gap-2"><span className="text-gold-light">•</span> tout explorer</li>
+                <li className="flex items-center gap-2"><span className="text-gold-light">•</span> évoluer sur plusieurs dimensions</li>
+                <li className="flex items-center gap-2"><span className="text-gold-light">•</span> investir sur le long terme</li>
               </ul>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Parcours Section */}
+      {/* SECTION 4 — PRÉSENTATION DES PARCOURS ÉLITES */}
       <section id="parcours" className="py-20 px-4 md:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-charcoal mb-4">
             Nos Parcours Élites
           </h2>
           <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-            Des parcours pensés pour élever vos compétences et transformer durablement vos pratiques
+            Des parcours pensés pour élever vos compétences, changer de dimension et transformer durablement vos pratiques.
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -401,9 +463,9 @@ export default function Home() {
                   ))}
                 </ul>
                 <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-                  <span className="text-xl font-bold text-green-dark">{p.price}</span>
+                  <span className="text-xl font-bold text-green-dark">💰 {p.price}</span>
                   <a href={p.link} className="text-green-dark hover:text-green-medium font-medium text-sm transition-colors">
-                    Découvrir →
+                    DÉCOUVRIR CE PARCOURS →
                   </a>
                 </div>
               </div>
@@ -412,11 +474,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Social Proof / Testimonial Section */}
+      {/* Social Proof Section */}
       <section className="py-20 px-4 md:px-8 bg-green-dark">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Content */}
             <div className="text-white">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Rejoignez des milliers de professionnels
@@ -440,9 +501,7 @@ export default function Home() {
               </div>
             </div>
             
-            {/* Image placeholder */}
             <div>
-              {/* PLACEHOLDER: Remplacer par une image de témoignage ou apprenants */}
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl aspect-video flex items-center justify-center border border-white/20">
                 <div className="text-center text-white/60">
                   <div className="text-5xl mb-3">🎓</div>
@@ -455,7 +514,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Ultimate Pack Section */}
+      {/* SECTION 5 — L'OFFRE ULTIME */}
       <section id="ultimate" className="py-20 px-4 md:px-8">
         <div className="max-w-4xl mx-auto">
           <div className="bg-gradient-to-br from-green-dark to-green-medium rounded-2xl p-8 md:p-12 text-white text-center">
@@ -470,7 +529,13 @@ export default function Home() {
             </p>
 
             <div className="grid sm:grid-cols-2 gap-4 max-w-lg mx-auto mb-8 text-left">
-              {["Tous les cours", "Tous les parcours élites", "Nouvelles formations incluses", "Certificat Full Access", "Priorité événements"].map((item, i) => (
+              {[
+                "Tous les cours",
+                "Tous les parcours élites",
+                "Nouvelles formations incluses",
+                "Certificat annuel Full Access",
+                "Priorité sur événements et offres"
+              ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
                   <CheckIcon className="text-gold-medium" />
                   <span className="text-white/90">{item}</span>
@@ -479,28 +544,29 @@ export default function Home() {
             </div>
 
             <div className="mb-8">
-              <p className="text-white/60 line-through mb-1">Valeur : +1.000.000 FCFA</p>
+              <p className="text-white/60 line-through mb-1">Valeur réelle : +1.000.000 FCFA</p>
+              <p className="text-lg text-white/80 mb-2">Prix spécial :</p>
               <p className="text-4xl md:text-5xl font-bold">
-                297.000 <span className="text-xl font-normal">FCFA/an</span>
+                297.000 <span className="text-xl font-normal">FCFA / an</span>
               </p>
             </div>
 
             <a href={LINKS.ultimatePack} className="inline-block bg-gold-medium hover:bg-gold-light text-charcoal font-semibold px-8 py-4 rounded-lg transition-colors text-lg">
-              Je veux l&apos;Ultimate Pack
+              JE VEUX L&apos;ULTIMATE PACK
             </a>
           </div>
         </div>
       </section>
 
-      {/* Guarantees */}
+      {/* SECTION 7 — GARANTIE & RASSURANCE */}
       <section className="py-16 px-4 md:px-8 bg-gray-50">
         <div className="max-w-5xl mx-auto">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: "⚡", title: "Accès immédiat", desc: "Après paiement" },
+              { icon: "⚡", title: "Accès immédiat", desc: "après paiement" },
               { icon: "🔒", title: "Paiement sécurisé", desc: "100% sécurisé" },
-              { icon: "👥", title: "Milliers d'apprenants", desc: "Nous font confiance" },
-              { icon: "📚", title: "Contenu pratique", desc: "Applicable immédiatement" },
+              { icon: "👥", title: "Plateforme utilisée", desc: "par des milliers de professionnels" },
+              { icon: "📚", title: "Contenu structuré", desc: "pratique et applicable" },
             ].map((item, i) => (
               <div key={i} className="text-center">
                 <span className="text-3xl mb-2 block">{item.icon}</span>
@@ -512,14 +578,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FAQ Section */}
+      {/* FOIRE AUX QUESTIONS */}
       <section id="faq" className="py-20 px-4 md:px-8">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-charcoal mb-4">
-            Questions fréquentes
+            ❓ FOIRE AUX QUESTIONS
           </h2>
           <p className="text-gray-600 text-center mb-12">
-            Tout ce que vous devez savoir sur nos offres
+            JE SUIS FOCUS EN 2026 | MANAGERSITY
           </p>
 
           <div className="space-y-4">
@@ -534,7 +600,7 @@ export default function Home() {
                     ▼
                   </span>
                 </button>
-                <div className={`px-6 text-gray-600 overflow-hidden transition-all duration-300 ${openFaq === index ? "max-h-40 pb-4" : "max-h-0"}`}>
+                <div className={`px-6 text-gray-600 overflow-hidden transition-all duration-300 ${openFaq === index ? "max-h-96 pb-4" : "max-h-0"}`}>
                   {item.a}
                 </div>
               </div>
@@ -543,21 +609,38 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* SECTION 8 — URGENCE & CLÔTURE */}
+      <section className="py-16 px-4 md:px-8 bg-red-600 text-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="text-4xl mb-4">⏰</p>
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">
+            Attention : ces offres disparaissent dans 10 jours.
+          </h2>
+          <p className="text-lg opacity-90 mb-4">
+            Après la campagne :
+          </p>
+          <ul className="mb-8 space-y-2">
+            <li>• Les prix reviennent à la normale</li>
+            <li>• Certains parcours ne seront plus disponibles sous ce format</li>
+          </ul>
+          <p className="text-xl font-semibold">
+            Choisissez votre parcours ou l&apos;Ultimate Pack maintenant
+          </p>
+        </div>
+      </section>
+
+      {/* SECTION 9 — CTA FINAL */}
       <section className="py-20 px-4 md:px-8 bg-green-dark">
         <div className="max-w-4xl mx-auto text-center text-white">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8">
             Prêt à faire de 2026 votre meilleure année ?
           </h2>
-          <p className="text-white/80 text-lg mb-8">
-            Le focus est une décision. 2026 se prépare aujourd&apos;hui.
-          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="#parcours" className="bg-gold-medium hover:bg-gold-light text-charcoal font-semibold px-8 py-4 rounded-lg transition-colors">
-              Découvrir les Parcours
+              👉 Découvrir les Parcours Élites
             </a>
             <a href="#ultimate" className="bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-lg border border-white/30 transition-colors">
-              Ultimate Pack – 12 mois
+              👉 Accéder à l&apos;Ultimate Pack – Full Access 12 mois
             </a>
           </div>
         </div>
@@ -592,6 +675,8 @@ export default function Home() {
                 <li><a href="#parcours" className="hover:text-white transition-colors">Manager d&apos;Élite</a></li>
                 <li><a href="#parcours" className="hover:text-white transition-colors">Manager Commercial</a></li>
                 <li><a href="#parcours" className="hover:text-white transition-colors">RH & Capital Humain</a></li>
+                <li><a href="#parcours" className="hover:text-white transition-colors">IA & Performance</a></li>
+                <li><a href="#parcours" className="hover:text-white transition-colors">Clarté & Performance</a></li>
               </ul>
             </div>
 
