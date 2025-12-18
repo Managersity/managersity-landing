@@ -181,7 +181,7 @@ function useCountdown(targetDate: Date) {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   useEffect(() => {
-    const timer = setInterval(() => {
+    const calculateTime = () => {
       const now = new Date().getTime();
       const distance = targetDate.getTime() - now;
 
@@ -193,7 +193,10 @@ function useCountdown(targetDate: Date) {
           seconds: Math.floor((distance % (1000 * 60)) / 1000),
         });
       }
-    }, 1000);
+    };
+
+    calculateTime();
+    const timer = setInterval(calculateTime, 1000);
 
     return () => clearInterval(timer);
   }, [targetDate]);
@@ -201,23 +204,23 @@ function useCountdown(targetDate: Date) {
   return timeLeft;
 }
 
-// Countdown Component
-function Countdown({ targetDate }: { targetDate: Date }) {
+// Countdown Component - Version grande pour la section urgence
+function CountdownBig({ targetDate }: { targetDate: Date }) {
   const { days, hours, minutes, seconds } = useCountdown(targetDate);
 
   return (
-    <div className="flex gap-2 md:gap-3">
+    <div className="flex justify-center gap-3 md:gap-4">
       {[
-        { value: days, label: "J" },
-        { value: hours, label: "H" },
-        { value: minutes, label: "M" },
-        { value: seconds, label: "S" },
+        { value: days, label: "Jours" },
+        { value: hours, label: "Heures" },
+        { value: minutes, label: "Minutes" },
+        { value: seconds, label: "Secondes" },
       ].map((item, i) => (
         <div key={i} className="text-center">
-          <div className="bg-white/20 backdrop-blur-sm text-white text-xl md:text-2xl font-bold rounded-lg w-12 md:w-14 h-12 md:h-14 flex items-center justify-center">
+          <div className="bg-gold-medium text-charcoal text-2xl md:text-4xl font-bold rounded-xl w-16 md:w-20 h-16 md:h-20 flex items-center justify-center shadow-lg">
             {String(item.value).padStart(2, "0")}
           </div>
-          <p className="text-white/60 text-xs mt-1">{item.label}</p>
+          <p className="text-gray-300 text-xs md:text-sm mt-2 font-medium">{item.label}</p>
         </div>
       ))}
     </div>
@@ -229,14 +232,6 @@ function ChartIcon() {
   return (
     <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
       <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
-    </svg>
-  );
-}
-
-function UsersIcon() {
-  return (
-    <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
     </svg>
   );
 }
@@ -303,19 +298,13 @@ export default function Home() {
                 Choisissez parmi <strong className="text-white">6 Parcours Élites</strong> ultra-ciblés (Dirigeant, Manager, Commercial, RH, IA, Performance Personnelle) ou prenez l&apos;<strong className="text-white">Ultimate Pack</strong> pour un accès total à toute la plateforme pendant 12 mois. Des prix jamais vus. Une opportunité unique.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+              <div className="flex flex-col sm:flex-row gap-4">
                 <a href="#parcours" className="bg-gold-medium hover:bg-gold-light text-charcoal font-semibold px-6 py-3 rounded-lg transition-colors text-center">
                   👉 Découvrir les offres
                 </a>
                 <a href="#ultimate" className="bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-lg border border-white/30 transition-colors text-center">
                   👉 Accéder à l&apos;Ultimate Pack
                 </a>
-              </div>
-
-              {/* Timer */}
-              <div className="flex items-center gap-4">
-                <span className="text-white/70 text-sm">⏰ Fin de l&apos;offre dans :</span>
-                <Countdown targetDate={END_DATE} />
               </div>
             </div>
 
@@ -383,19 +372,21 @@ export default function Home() {
       </section>
 
       {/* SECTION 3 — LES 2 OPTIONS POSSIBLES */}
-      <section className="py-20 px-4 md:px-8">
+      <section className="py-20 px-4 md:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8">
-            {/* Option 1 */}
-            <div className="bg-white rounded-xl p-8 border border-gray-200 hover:border-green-dark/30 hover:shadow-lg transition-all">
-              <div className="w-12 h-12 bg-green-dark/10 rounded-lg flex items-center justify-center text-green-dark mb-4">
+            {/* Option 1 - Fond blanc */}
+            <div className="bg-white rounded-xl p-8 border border-gray-200 hover:shadow-lg transition-all">
+              <div className="w-12 h-12 bg-green-dark/10 rounded-lg flex items-center justify-center text-green-dark mb-6">
                 <AcademicIcon />
               </div>
-              <h3 className="text-2xl font-bold text-charcoal mb-4">Option 1️⃣ : Choisir un Parcours Élite</h3>
+              <h3 className="text-2xl font-bold text-charcoal mb-4">
+                Option <span className="bg-green-dark text-white px-2 py-1 rounded text-lg">1</span> : Choisir un Parcours Élite
+              </h3>
               <p className="text-gray-600 mb-6">
-                Un parcours ciblé, structuré, orienté résultat. Idéal si vous avez un <strong>objectif précis</strong> :
+                Un parcours ciblé, structuré, orienté résultat. Idéal si vous avez un <strong className="text-green-dark">objectif précis</strong> :
               </p>
-              <ul className="space-y-2 text-gray-700">
+              <ul className="space-y-3 text-gray-700">
                 <li className="flex items-center gap-2"><span className="text-green-medium">•</span> mieux diriger</li>
                 <li className="flex items-center gap-2"><span className="text-green-medium">•</span> mieux manager</li>
                 <li className="flex items-center gap-2"><span className="text-green-medium">•</span> mieux vendre</li>
@@ -404,19 +395,23 @@ export default function Home() {
               </ul>
             </div>
 
-            {/* Option 2 */}
+            {/* Option 2 - Fond vert avec badge corrigé */}
             <div className="relative bg-gradient-to-br from-green-dark to-green-medium rounded-xl p-8 text-white overflow-hidden">
-              <div className="absolute -top-2 -right-2 bg-gold-medium text-charcoal px-4 py-1 rounded-full text-xs font-bold uppercase shadow-lg">
+              {/* Badge Recommandé - corrigé */}
+              <div className="absolute top-4 right-4 bg-gold-medium text-charcoal px-3 py-1.5 rounded-full text-xs font-bold uppercase shadow-md">
                 Recommandé
               </div>
-              <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-4">
+              
+              <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-6">
                 <ChartIcon />
               </div>
-              <h3 className="text-2xl font-bold mb-4">Option 2️⃣ : Choisir l&apos;Ultimate Pack</h3>
+              <h3 className="text-2xl font-bold mb-4">
+                Option <span className="bg-gold-medium text-charcoal px-2 py-1 rounded text-lg">2</span> : Choisir l&apos;Ultimate Pack
+              </h3>
               <p className="text-white/80 mb-6">
                 Un accès total, sans limite, pendant 12 mois. Idéal si vous voulez :
               </p>
-              <ul className="space-y-2 text-white/90">
+              <ul className="space-y-3 text-white/90">
                 <li className="flex items-center gap-2"><span className="text-gold-light">•</span> tout explorer</li>
                 <li className="flex items-center gap-2"><span className="text-gold-light">•</span> évoluer sur plusieurs dimensions</li>
                 <li className="flex items-center gap-2"><span className="text-gold-light">•</span> investir sur le long terme</li>
@@ -465,7 +460,7 @@ export default function Home() {
                 <div className="flex items-center justify-between pt-4 border-t border-gray-100">
                   <span className="text-xl font-bold text-green-dark">💰 {p.price}</span>
                   <a href={p.link} className="text-green-dark hover:text-green-medium font-medium text-sm transition-colors">
-                    DÉCOUVRIR CE PARCOURS →
+                    DÉCOUVRIR →
                   </a>
                 </div>
               </div>
@@ -515,7 +510,7 @@ export default function Home() {
       </section>
 
       {/* SECTION 5 — L'OFFRE ULTIME */}
-      <section id="ultimate" className="py-20 px-4 md:px-8">
+      <section id="ultimate" className="py-20 px-4 md:px-8 bg-white">
         <div className="max-w-4xl mx-auto">
           <div className="bg-gradient-to-br from-green-dark to-green-medium rounded-2xl p-8 md:p-12 text-white text-center">
             <span className="inline-block bg-gold-medium text-charcoal text-sm font-semibold px-4 py-1 rounded-full mb-6">
@@ -579,7 +574,7 @@ export default function Home() {
       </section>
 
       {/* FOIRE AUX QUESTIONS */}
-      <section id="faq" className="py-20 px-4 md:px-8">
+      <section id="faq" className="py-20 px-4 md:px-8 bg-white">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-charcoal mb-4">
             ❓ FOIRE AUX QUESTIONS
@@ -590,9 +585,9 @@ export default function Home() {
 
           <div className="space-y-4">
             {faqData.map((item, index) => (
-              <div key={index} className="bg-white rounded-xl border border-gray-200 overflow-hidden">
+              <div key={index} className="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden">
                 <button
-                  className="w-full flex justify-between items-center px-6 py-4 text-left font-medium text-charcoal hover:bg-gray-50 transition-colors"
+                  className="w-full flex justify-between items-center px-6 py-4 text-left font-medium text-charcoal hover:bg-gray-100 transition-colors"
                   onClick={() => setOpenFaq(openFaq === index ? null : index)}
                 >
                   <span>{item.q}</span>
@@ -609,21 +604,27 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION 8 — URGENCE & CLÔTURE */}
-      <section className="py-16 px-4 md:px-8 bg-red-600 text-white">
+      {/* SECTION 8 — URGENCE & CLÔTURE - Fond charcoal/sombre avec compteur */}
+      <section className="py-16 px-4 md:px-8 bg-charcoal text-white">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-4xl mb-4">⏰</p>
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">
-            Attention : ces offres disparaissent dans 10 jours.
+          <p className="text-5xl mb-6">⏰</p>
+          <h2 className="text-2xl md:text-3xl font-bold mb-6">
+            Attention : ces offres disparaissent dans
           </h2>
-          <p className="text-lg opacity-90 mb-4">
+          
+          {/* Compteur dynamique */}
+          <div className="mb-8">
+            <CountdownBig targetDate={END_DATE} />
+          </div>
+
+          <p className="text-lg text-gray-300 mb-4">
             Après la campagne :
           </p>
-          <ul className="mb-8 space-y-2">
+          <ul className="mb-8 space-y-2 text-gray-400">
             <li>• Les prix reviennent à la normale</li>
             <li>• Certains parcours ne seront plus disponibles sous ce format</li>
           </ul>
-          <p className="text-xl font-semibold">
+          <p className="text-xl font-semibold text-gold-light">
             Choisissez votre parcours ou l&apos;Ultimate Pack maintenant
           </p>
         </div>
