@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -11,28 +11,7 @@
   --color-cream: #faf8f5;
   --color-charcoal: #1a1a1a;
 
-  --font-family-display: 'Playfair Display', serif;
-  --font-family-body: 'DM Sans', sans-serif;
-
-  --animate-float: float 20s ease-in-out infinite;
-  --animate-pulse-slow: pulse-slow 4s ease-in-out infinite;
-  --animate-bounce-slow: bounce-slow 2s ease-in-out infinite;
-
-  @keyframes float {
-    0%, 100% { transform: translate(0, 0) rotate(0deg); }
-    33% { transform: translate(30px, -30px) rotate(5deg); }
-    66% { transform: translate(-20px, 20px) rotate(-5deg); }
-  }
-
-  @keyframes pulse-slow {
-    0%, 100% { opacity: 0.5; transform: scale(1); }
-    50% { opacity: 1; transform: scale(1.1); }
-  }
-
-  @keyframes bounce-slow {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-5px); }
-  }
+  --font-family-sans: 'Inter', sans-serif;
 }
 
 html {
@@ -40,11 +19,5 @@ html {
 }
 
 body {
-  font-family: var(--font-family-body);
-  background-color: var(--color-cream);
-  color: var(--color-charcoal);
-}
-
-h1, h2, h3, h4 {
-  font-family: var(--font-family-display);
+  font-family: var(--font-family-sans);
 }
